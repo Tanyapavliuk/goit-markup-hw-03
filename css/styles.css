@@ -280,6 +280,9 @@ h1,h2,h3,p,ul{
 
 
 /* portfolio */
+.line{
+    border-bottom: 1px solid #E7E9FC;
+}
 
 .button-list{
     margin-top: 96px;
