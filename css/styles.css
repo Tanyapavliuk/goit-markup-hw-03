@@ -3,6 +3,7 @@ body{
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
     font-size: 16px;
+    background-color: #FFFFFF;
 }
 :root{
     --title-color: #343549;
@@ -18,7 +19,12 @@ h1,h2,h3,p,ul{
     margin-bottom: 0;
     padding: 0;
 }
-
+/* Прибирання відступу у картинки знизу */
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .conteiner{
     width: 1158px;
     padding-left: 15px;
@@ -97,11 +103,11 @@ h1,h2,h3,p,ul{
 .contact-marning{
     margin-left: auto;
 }
-.contact-item{
+.contact-link{
     padding-top: 24px;
     padding-bottom: 24px;
 }
-.contact-item:not(:last-child){
+.contact-link.space:not(:last-child){
     margin-right: 40px;
 }
 .contact a{
@@ -117,11 +123,13 @@ h1,h2,h3,p,ul{
     background-color: #2E2F42;
 }
 .conteiner.order{
-    padding: 188px ;
+    padding: 188px 0;
     text-align: center;
 }
 .title-main{
-    display: inline-block;
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 496px;
     margin-bottom: 48px;
     color: #ffffff;
     font-weight: 700;
@@ -129,8 +137,6 @@ h1,h2,h3,p,ul{
     line-height: 1.07em;
 }
 .button-order{
-    display: flex;
-    align-items: center;
     min-width: 105px;
     padding: 16px 32px;
     border: 0;
@@ -166,7 +172,7 @@ h1,h2,h3,p,ul{
 }
 
 .objectives-item{
-    width: calc((100%-3*24px)/4);
+    width: calc((100% - 3 * 24px) / 4);
 }
 .objectives-item:not(:last-child){
     margin-right: 24px;
@@ -191,7 +197,7 @@ h1,h2,h3,p,ul{
     display: flex;
 }
 .doing-space{
-    width: calc((100%-2*24px)/3);
+    width: calc((100% - 2 * 24px) / 3);
 }
 .doing-space:not(:last-child){
     margin-right: 24px;
@@ -230,31 +236,30 @@ h1,h2,h3,p,ul{
     line-height:1.2;
     letter-spacing: 0.02em;
 }
-.team-list{
-    display: flex;
-}
-.team-space{
-    width: calc((100%-3*24px)/4);
-    text-align: center;
-
-    background: #FFFFFF;
-    border-radius: 0px 0px 4px 4px;
-}
-.team-space:not(:last-child){
-    margin-right: 24px;
-}
 .photo-space{
     margin-bottom: 32px;
 }
 .team-text{
-    margin-bottom: 32px;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+.team-list{
+    display: flex;
+}
+.team-space{
+    width: calc((100% - 3 * 24px) / 4);
+    text-align: center;
+    padding-bottom: 32px;
+
+    background: #FFFFFF;
+    border-radius: 0px 0px 4px 4px;  
+}
+.team-space:not(:last-child){
+    margin-right: 24px;
+}
+
 .footer{
     background-color: #2E2F42;
-}
-.conteiner.footer{
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -283,25 +288,21 @@ h1,h2,h3,p,ul{
     border-bottom: 1px solid #E7E9FC;
 }
 
-.button-list{
-    margin-top: 96px;
-    margin-bottom: 120px;
-
-}
-
-.button-item:not(:last-child){
-    margin-right: 24px;
+.portfolio{
+    padding-top: 96px;
+    padding-bottom: 120px;
 }
 .button-nav-list{
     display: flex;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    
+    justify-content: center;
     list-style-type: none;
     
     margin-bottom: 72px;
 }
+.button-item:not(:last-child){
+    margin-right: 24px;
+}
+
 .button-nav{
     margin: 0;
     padding: 12px 24px;
@@ -323,12 +324,13 @@ h1,h2,h3,p,ul{
     background-color: var(--hoveraccent-color);
 }
 .examples{
+    justify-content: center;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
 }
 .examples-item{
-    width: calc(100%-3);
+    width: calc(100% - 24 * 2) / 3;
 }
 .examples-item{
     margin-right: 24px;
@@ -343,12 +345,15 @@ h1,h2,h3,p,ul{
 }
 
 .content{
-    margin-top: -8px;
     padding-top: 32px;
-    border: 1px solid #E7E9FC
+    padding-left: 16px;
+    padding-bottom: 32px;
+    border-left: 1px solid #E7E9FC;
+    border-right: 1px solid #E7E9FC;
+    border-bottom: 1px solid #E7E9FC;
 }
 .examples-link{
-    display: inline-block;
+    display: block;
     color: var(--text-color);
     text-decoration: none;
     line-height: 1.5;
@@ -356,7 +361,6 @@ h1,h2,h3,p,ul{
 }
 .examples-list{
     margin-bottom: 8px;
-    margin-left: 16px;
 
     color: var(--title-color);
     font-weight: 500;
@@ -365,10 +369,6 @@ h1,h2,h3,p,ul{
     letter-spacing: 0.02em;
 }
 .examples-text{
-    margin-left: 16px;
-    margin-bottom: 32px;
-
-
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
